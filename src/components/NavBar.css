@@ -1,0 +1,35 @@
+.navbar {
+  background-color: rgba(25, 25, 25, 0.4);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+}
+
+#logo {
+  margin: 0 10%;
+}
+
+.navbar img {
+  height: 100px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0 10%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar li {
+  padding: 10px;
+}
