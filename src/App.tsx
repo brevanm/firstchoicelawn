@@ -2,6 +2,8 @@ import NavBar from "./components/NavBar";
 import ShowcaseImage from "./assets/showcase.jpg";
 import Showcase from "./components/Showcase";
 import ServiceCard from "./components/ServiceCard";
+import Form from "./components/Form";
+import TreeImage from "./assets/trees.jpg";
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
           style={{
             objectFit: "cover",
             width: "100%",
-            height: "100%",
+            height: "100vh",
             margin: "0",
             padding: "0",
             filter: "brightness(50%) contrast(85%)",
@@ -23,7 +25,7 @@ function App() {
         <div
           style={{
             position: "absolute",
-            top: "40%",
+            top: "60%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: "70%",
@@ -51,22 +53,60 @@ function App() {
             <a href="#services">
               <button>Services</button>
             </a>
-            <button>Get a Quote</button>
+            <button className="text-white">Get a Quote</button>
           </div>
         </div>
       </Showcase>
-      <Showcase id="services">
-        <h1>Services</h1>
-        <ServiceCard
-          title="Mowing"
-          description="i mow grass"
-          image="https://picsum.photos/200/300"
-        />
+      <Showcase id="services" bgColor="#FAFDFB" padding>
+        <div className="flex flex-col items-center px-2 pt-24 pb-6">
+          <h1 className="font-bold text-6xl">Services</h1>
+          <p>Got grass?</p>
+          <div className="max-w-5xl pt-6">
+            <div className="flex flex-wrap justify-between gap-y-8">
+              <ServiceCard
+                title="Mowing"
+                description="i mow grass"
+                image={TreeImage}
+              />
+              <ServiceCard
+                title="Mowing"
+                description="i mow grass"
+                image={TreeImage}
+              />
+              <ServiceCard
+                title="Mowing"
+                description="i mow grass"
+                image={TreeImage}
+              />
+              <ServiceCard
+                title="Mowing"
+                description="i mow grass"
+                image={TreeImage}
+              />
+              <ServiceCard
+                title="Mowing"
+                description="i mow grass"
+                image={TreeImage}
+              />
+              <ServiceCard
+                title="Mowing"
+                description="i mow grass"
+                image={TreeImage}
+              />
+            </div>
+          </div>
+        </div>
       </Showcase>
-      <Showcase id="about">
-        <h1 className="underline">about</h1>
+      <Showcase id="about" padding>
+        <div className="flex flex-col items-center px-2 pt-24 pb-6">
+          <h1 className="font-bold text-6xl">About</h1>
+          <p>TODO</p>
+        </div>
       </Showcase>
-      <Showcase id="contact">contact</Showcase>
+      <Showcase id="contact" bgColor="#FAFDFB" padding>
+        <h1>Contact</h1>
+        <Form />
+      </Showcase>
     </>
   );
 }

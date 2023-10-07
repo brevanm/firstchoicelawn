@@ -3,7 +3,7 @@ import Logo from "../assets/logo.png";
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar drop-shadow-lg">
       <a id="logo" href="/">
         <img src={Logo} alt="logo" />
       </a>
