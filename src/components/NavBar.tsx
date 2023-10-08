@@ -1,25 +1,26 @@
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 import Logo from "../assets/logo.png";
 
 const NavBar = () => {
   return (
     <nav className="navbar drop-shadow-lg">
-      <a id="logo" href="/">
+      <Link id="logo" to="/">
         <img src={Logo} alt="logo" />
-      </a>
+      </Link>
       <ul>
-        <a href="#">
+        <Link to="/#">
           <li>Home</li>
-        </a>
-        <a href="#services">
+        </Link>
+        <Link to="/#services">
           <li>Services</li>
-        </a>
-        <a href="#about">
+        </Link>
+        <Link to="/#about">
           <li>About</li>
-        </a>
-        <a href="#contact">
+        </Link>
+        <Link to="/#contact">
           <li>Contact</li>
-        </a>
+        </Link>
       </ul>
     </nav>
   );
