@@ -1,11 +1,15 @@
 import { useState } from "react";
 import TextField from "./TextField";
+import type { Service } from "../utils/types";
+
+const SERVICES: Service[] = ["Mowing", "Mulching", "Other"];
 
 const Form = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [address, setAddress] = useState<string>("");
+  const [services, setServices] = useState<Service[]>([]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -13,7 +17,6 @@ const Form = () => {
   };
 
   const handlePhoneChange = (number: string) => {
-    // if (number.length > 10) return;
     number = number.replace(/\D/g, "");
 
     let newPhoneNumber = number;
@@ -30,11 +33,19 @@ const Form = () => {
     setPhone(newPhoneNumber);
   };
 
+  const handleCheckboxChange = (service: Service) => {
+    if (services.includes(service)) {
+      setServices(services.filter((s) => s !== service));
+    } else {
+      setServices([...services, service]);
+    }
+  };
+
   return (
-    <div className="flex flex-col gap-y-4 bg-white rounded shadow-lg">
+    <div className="flex flex-col bg-white rounded shadow-lg p-4">
       <h3>Request a Quote</h3>
       <form onSubmit={handleSubmit}>
-        <div className="flex gap-x-4">
+        <div className="flex gap-x-4 my-4">
           <TextField placeholder="Name" value={name} setValue={setName} />
           <TextField placeholder="Email" value={email} setValue={setEmail} />
         </div>
@@ -50,6 +61,23 @@ const Form = () => {
             setValue={setAddress}
           />
         </div>
+        <div className="flex gap-x-4 my-2 mt-4">
+          {SERVICES.map((service) => (
+            <div className="flex gap-x-2">
+              <input
+                type="checkbox"
+                checked={services.includes(service)}
+                onChange={() => handleCheckboxChange(service)}
+              />
+              <label>{service}</label>
+            </div>
+          ))}
+        </div>
+        <textarea
+          className="w-full h-32 p-2 my-2 rounded border border-gray-300"
+          placeholder="Describe your needs..."
+        />
+        <button className="btn btn-primary m-2 float-right">Submit</button>
       </form>
     </div>
   );

@@ -1,0 +1,16 @@
+export type Service =
+  | "Mowing"
+  | "Trimming"
+  | "Edging"
+  | "Blowing"
+  | "Weeding"
+  | "Mulching"
+  | "Fertilizing"
+  | "Aerating"
+  | "Seeding"
+  | "Sodding"
+  | "Leaf Removal"
+  | "Gutter Cleaning"
+  | "Power Washing"
+  | "Snow Removal"
+  | "Other";
