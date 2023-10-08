@@ -18,7 +18,7 @@ const ServiceCard = (props: Props) => {
         <h3 className="font-bold mb-2">{title}</h3>
         <p>{description}</p>
         <div>
-          <p className="text-green-700 flex justify-end">{"Learn More ->"}</p>
+          <p className="text-green-700 flex justify-end">Learn More</p>
         </div>
       </div>
     </div>
