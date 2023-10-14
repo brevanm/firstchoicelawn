@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import Drawer from "./Drawer";
 import MenuIcon from "./icons/MenuIcon";
@@ -44,9 +43,9 @@ const NavBar = () => {
         </ul>
       </Drawer>
       <nav className="navbar drop-shadow-lg">
-        <Link className="ml-10 md:ml-40" to="/">
+        <HashLink className="ml-10 md:ml-40" to="/#">
           <img src={Logo} alt="logo" />
-        </Link>
+        </HashLink>
         <ul className="hidden list-none mr-40 p-0 justify-between  md:flex">
           {list}
         </ul>
