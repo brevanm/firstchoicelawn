@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TextField from "./TextField";
+import Button from "./Button";
 import type { Service } from "../utils/types";
 
 const SERVICES: Service[] = ["Mowing", "Mulching", "Other"];
@@ -75,7 +76,9 @@ const Form = () => {
           className="w-full h-32 p-2 my-2 rounded border border-gray-300"
           placeholder="Describe your needs..."
         />
-        <button className="btn btn-primary m-2 float-right">Submit</button>
+        <div className="flex justify-end">
+          <Button highlight>Submit</Button>
+        </div>
       </form>
     </div>
   );

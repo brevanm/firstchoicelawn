@@ -8,10 +8,15 @@ const Button = (props: Props) => {
   const { children, highlight, onClick } = props;
 
   const baseClass =
-    "bg-transparent text-white font-semibold hover:bg-white hover:text-green-800 py-2 px-4 border border-white hover:border-transparent";
+    "bg-transparent text-white font-semibold py-2 px-4 border border-white hover:border-transparent";
 
-  const highlightClass = "bg-green-800 text-white border-none";
-  const classes = highlight ? `${baseClass} ${highlightClass}` : baseClass;
+  const regularClass = "hover:bg-white hover:text-green-800";
+  const highlightClass =
+    "bg-green-800 text-white border-none hover:bg-gray-800";
+
+  const classes = highlight
+    ? baseClass + " " + highlightClass
+    : baseClass + " " + regularClass;
 
   return (
     <button onClick={onClick} className={classes}>
