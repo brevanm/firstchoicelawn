@@ -53,11 +53,11 @@ const HomePage = () => {
           <h1 className="font-bold text-6xl">Services</h1>
           <p>Got grass?</p>
           <div className="pt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
               <ServiceCard
                 path={"/services/mowing"}
-                title="Mowing"
-                description="i mow grass"
+                title="Weekly Lawn Maintenance"
+                description="Experience pristine and well-manicured lawns with our comprehensive lawn maintenance services, where we combine expert techniques, attention to detail, and a commitment to excellence to keep your lawn healthy, vibrant, and beautiful."
                 image={TreeImage}
               />
               <ServiceCard
