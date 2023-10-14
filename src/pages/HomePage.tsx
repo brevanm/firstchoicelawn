@@ -97,29 +97,43 @@ const HomePage = () => {
       <Showcase id="about" padding>
         <div className="flex flex-col items-center px-2 pt-24 pb-6">
           <div className="flex flex-wrap gap-8 items-center justify-center">
-            <img
-              className="cover-image max-h-96 rounded-lg"
-              src={AboutImage}
-              alt="first choice loading mulch"
-            />
             <div
               style={{ maxWidth: "30rem" }}
               className="text-center md:text-left"
             >
               <h3 className="text-green-800 text-xl my-4">
-                First Choice Lawn and Landscape, LLC
+                About First Choice Lawn & Landscape
               </h3>
               <h1 className="font-bold text-3xl my-4">
                 We are Summit County's premier landscape maintenance partner.
               </h1>
-              <p className="my-4">
-                At Leadway Landscaping, we strive to be leaders in the Green
-                Industry, setting the standard for quality, innovation, and
-                cultivating a strong team culture. With our commitment to
-                sustainability and a forward-thinking approach, we aim to make a
-                positive impact and pave the way for a greener future.
+              <p className="my-4 text-gray-700">
+                We are driven to be trailblazers in the green Industry, setting
+                the standard for quality, innovation, and cultivating a positive
+                team culture.
+              </p>
+              <p className="my-4 text-gray-700">
+                With a strong focus on providing exceptional lawn care,
+                landscaping, and snow removal services, we prioritize customer
+                satisfaction by delivering outstanding customer service from
+                start to finish.
+              </p>
+              <p className="my-4 text-gray-700">
+                We value open communication, promptly addressing any concerns,
+                and ensuring our clients have a positive and enjoyable
+                experience with us.
+              </p>
+              <p className="text-green-800 text-xl mt-4">Jayce Dippel</p>
+              <p className="font-bold">
+                Owner, First Choice Lawn and Landscape, LLC
               </p>
             </div>
+            <img
+              className="cover-image rounded-lg shadow-lg"
+              style={{ maxHeight: "30rem" }}
+              src={AboutImage}
+              alt="first choice loading mulch"
+            />
           </div>
         </div>
       </Showcase>
