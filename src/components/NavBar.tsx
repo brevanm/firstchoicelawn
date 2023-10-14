@@ -6,7 +6,7 @@ import Logo from "../assets/logo.png";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [open, setOpen] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
 
   const list = (
     <>
