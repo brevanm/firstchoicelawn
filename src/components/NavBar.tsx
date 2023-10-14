@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import Drawer from "./Drawer";
 import MenuIcon from "./icons/MenuIcon";
 import Logo from "../assets/logo.png";
@@ -10,18 +11,18 @@ const NavBar = () => {
 
   const list = (
     <>
-      <a href="#">
+      <HashLink to="/#">
         <li>Home</li>
-      </a>
-      <a href="#services">
+      </HashLink>
+      <HashLink to="/#services">
         <li>Services</li>
-      </a>
-      <a href="#about">
+      </HashLink>
+      <HashLink to="/#about">
         <li>About</li>
-      </a>
-      <a href="#contact">
+      </HashLink>
+      <HashLink to="/#contact">
         <li>Contact</li>
-      </a>
+      </HashLink>
     </>
   );
 
