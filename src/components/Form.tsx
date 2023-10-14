@@ -43,13 +43,11 @@ const Form = () => {
 
   return (
     <div className="flex flex-col bg-white rounded shadow-lg p-4">
-      <h3>Request a Quote</h3>
+      <h3 className="mt-1 mb-3">Request a Quote</h3>
       <form onSubmit={handleSubmit}>
-        <div className="flex gap-x-4 my-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <TextField placeholder="Name" value={name} setValue={setName} />
           <TextField placeholder="Email" value={email} setValue={setEmail} />
-        </div>
-        <div className="flex gap-x-4">
           <TextField
             placeholder="Phone"
             value={phone}
@@ -63,7 +61,7 @@ const Form = () => {
         </div>
         <div className="flex gap-x-4 my-2 mt-4">
           {SERVICES.map((service) => (
-            <div className="flex gap-x-2">
+            <div key={`checkbox-${service}`} className="flex gap-x-2">
               <input
                 type="checkbox"
                 checked={services.includes(service)}

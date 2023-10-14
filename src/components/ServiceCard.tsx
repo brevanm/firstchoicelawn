@@ -1,14 +1,19 @@
+import { Link } from "react-router-dom";
 type Props = {
   title: string;
   description: string;
   image: string;
+  path: string;
 };
 
 const ServiceCard = (props: Props) => {
-  const { title, description, image } = props;
+  const { title, description, image, path } = props;
 
   return (
-    <div className="rounded shadow-lg bg-white overflow-hidden max-w-md w-80 hover:scale-105 transition cursor-pointer">
+    <Link
+      to={path}
+      className="rounded shadow-lg bg-white overflow-hidden hover:scale-105 transition cursor-pointer"
+    >
       <img
         className="w-full object-cover aspect-video"
         src={image}
@@ -21,7 +26,7 @@ const ServiceCard = (props: Props) => {
           <p className="text-green-700 flex justify-end">Learn More</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

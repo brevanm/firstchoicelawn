@@ -10,24 +10,8 @@
   align-items: center;
 }
 
-.navbar a {
-  color: black;
-}
-
-#logo {
-  margin: 0 10%;
-}
-
 .navbar img {
   height: 5rem;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0 10%;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
 }
 
 .navbar li {

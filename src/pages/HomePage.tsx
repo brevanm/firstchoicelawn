@@ -3,6 +3,7 @@ import Showcase from "../components/Showcase";
 import ServiceCard from "../components/ServiceCard";
 import Form from "../components/Form";
 import TreeImage from "../assets/trees.jpg";
+import Button from "../components/Button";
 
 const HomePage = () => {
   return (
@@ -21,24 +22,13 @@ const HomePage = () => {
           alt="random"
         />
         <div
-          style={{
-            position: "absolute",
-            top: "60%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "70%",
-          }}
+          className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-10 md:px-40"
+          style={{ top: "55%" }}
         >
-          <h1
-            style={{
-              textAlign: "center",
-              color: "white",
-              fontSize: "4rem",
-            }}
-          >
+          <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-center text-white">
             Northeast Ohio's Premier Full Service Lawn and Landscaping Provider
           </h1>
-          <p style={{ color: "white" }}>
+          <p className="my-6 text-center" style={{ color: "white" }}>
             Welcome to Leadway Landscaping, your full-service landscaping
             provider. We take pride in delivering unparalleled lawn care,
             top-tier landscaping services, and dependable residential snow
@@ -49,9 +39,11 @@ const HomePage = () => {
             style={{ display: "flex", justifyContent: "center", gap: "20px" }}
           >
             <a href="#services">
-              <button>Services</button>
+              <Button>Services</Button>
             </a>
-            <button className="text-white">Get a Quote</button>
+            <a href="#contact">
+              <Button highlight>Get a Quote</Button>
+            </a>
           </div>
         </div>
       </Showcase>
@@ -59,34 +51,40 @@ const HomePage = () => {
         <div className="flex flex-col items-center px-2 pt-24 pb-6">
           <h1 className="font-bold text-6xl">Services</h1>
           <p>Got grass?</p>
-          <div className="max-w-5xl pt-6">
-            <div className="flex flex-wrap justify-between gap-y-8">
+          <div className="pt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ServiceCard
+                path={"/services/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
+                path={"/services/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
+                path={"/services/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
+                path={"/services/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
+                path={"/services/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
+                path={"/services/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
