@@ -17,8 +17,6 @@ const Drawer = (props: Props) => {
     setLock(open);
   }, [open, setLock]);
 
-  console.log("open: ", open);
-
   return (
     <>
       <div
