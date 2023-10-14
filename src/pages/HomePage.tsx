@@ -52,8 +52,8 @@ const HomePage = () => {
         <div className="flex flex-col items-center px-2 pt-24 pb-6">
           <h1 className="font-bold text-6xl">Services</h1>
           <p>Got grass?</p>
-          <div className="pt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+          <div className="pt-6 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr w-full">
               <ServiceCard
                 path={"/services/mowing"}
                 title="Weekly Lawn Maintenance"
