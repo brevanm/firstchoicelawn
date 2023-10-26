@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 type Props = {
   title: string;
   description: string;
@@ -7,7 +6,7 @@ type Props = {
 };
 
 const ServiceCard = (props: Props) => {
-  const { title, description, image, path } = props;
+  const { title, description, image } = props;
 
   return (
     <div
