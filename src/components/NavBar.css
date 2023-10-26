@@ -17,3 +17,7 @@
 .navbar li {
   padding: 10px;
 }
+
+.navbar li:hover {
+  color: green;
+}

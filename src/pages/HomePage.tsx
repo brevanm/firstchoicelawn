@@ -51,41 +51,41 @@ const HomePage = () => {
       <Showcase id="services" bgColor="#FAFDFB" padding>
         <div className="flex flex-col items-center px-2 pt-24 pb-6">
           <h1 className="font-bold text-6xl">Services</h1>
-          <p>Got grass?</p>
+          <p>Design, Build & Maintain</p>
           <div className="pt-6 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr w-full">
               <ServiceCard
-                path={"/services/mowing"}
+                path={"/service/mowing"}
                 title="Weekly Lawn Maintenance"
                 description="Experience pristine and well-manicured lawns with our comprehensive lawn maintenance services, where we combine expert techniques, attention to detail, and a commitment to excellence to keep your lawn healthy, vibrant, and beautiful."
                 image={TreeImage}
               />
               <ServiceCard
-                path={"/services/mowing"}
+                path={"/service/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
-                path={"/services/mowing"}
+                path={"/service/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
-                path={"/services/mowing"}
+                path={"/service/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
-                path={"/services/mowing"}
+                path={"/service/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
               />
               <ServiceCard
-                path={"/services/mowing"}
+                path={"/service/mowing"}
                 title="Mowing"
                 description="i mow grass"
                 image={TreeImage}
