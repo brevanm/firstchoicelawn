@@ -1,31 +1,38 @@
+import Chip from "./Chip";
+
 type Props = {
   title: string;
   description: string;
   image: string;
   path: string;
+  bullets: string[];
 };
 
 const ServiceCard = (props: Props) => {
-  const { title, description, image } = props;
+  const { bullets, title, description, image } = props;
 
   return (
     <div
       // to={path}
-      className="rounded shadow-lg bg-white overflow-hidden hover:scale-105 transition relative"
+      className="rounded shadow-lg bg-white overflow-hidden md:hover:scale-105 transition relative"
     >
       <img
         className="w-full object-cover aspect-video"
         src={image}
         alt="service"
       />
-      <div className="px-6 pt-4 pb-20">
+      <div className="px-6 pt-4 pb-8">
+        <ul className="flex flex-wrap gap-2 mb-3">
+          {bullets.map((bullet) => (
+            <li key={bullet}>
+              <Chip>{bullet}</Chip>
+            </li>
+          ))}
+        </ul>
         <h3 className="font-bold mb-2">{title}</h3>
         <p>{description}</p>
-        {/* <div>
-          <p className="text-green-700 flex justify-end absolute bottom-6 right-6">
-            Learn More
-          </p>
-        </div> */}
+        {/* <div className="flex justify-end flex-wrap absolute bottom-6"> */}
+        {/* </div> */}
       </div>
     </div>
   );
