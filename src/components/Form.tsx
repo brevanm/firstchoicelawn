@@ -2,8 +2,6 @@ import { useState } from "react";
 import TextField from "./TextField";
 import Button from "./Button";
 import Select from "./Select";
-import { sendEmail } from "../utils/email";
-// import type { Service } from "../utils/types";
 
 const PIPELINES = [
   "Customer Referral",
@@ -89,14 +87,7 @@ const Form = () => {
           placeholder="Describe your needs..."
         />
         <div className="flex justify-end">
-          <Button
-            highlight
-            onClick={() => {
-              sendEmail();
-            }}
-          >
-            Submit
-          </Button>
+          <Button highlight>Submit</Button>
         </div>
       </form>
     </div>
