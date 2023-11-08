@@ -26,7 +26,7 @@ const HomePage = () => {
           alt="random"
         />
         <div
-          className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-10 md:px-40"
+          className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-10 md:px-40 max-w-screen-xl"
           style={{ top: "55%" }}
         >
           <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-center text-white">
@@ -53,7 +53,7 @@ const HomePage = () => {
         </div>
       </Showcase>
       <Showcase id="services" bgColor="#FAFDFB" padding>
-        <div className="flex flex-col items-center px-2 pt-24 pb-6">
+        <div className="flex flex-col items-center px-2 pt-24 pb-6 max-w-screen-xl m-auto">
           <h1 className="font-bold text-6xl">Services</h1>
           <p className="text-green-800">Design, Build & Maintain</p>
           <div className="pt-6 w-full">
@@ -138,11 +138,13 @@ const HomePage = () => {
         </div>
       </Showcase>
       <Showcase id="contact" bgColor="#FAFDFB" padding>
-        <div className="flex flex-col items-center px-2 pt-24 pb-6">
-          <h1 className="font-bold text-6xl">Contact</h1>
-          <p>330-907-7556</p>
+        <div className="max-w-screen-xl m-auto">
+          <div className="flex flex-col items-center px-2 pt-24 pb-6 ">
+            <h1 className="font-bold text-6xl">Contact</h1>
+            <p>330-907-7556</p>
+          </div>
+          <Form />
         </div>
-        <Form />
       </Showcase>
     </>
   );

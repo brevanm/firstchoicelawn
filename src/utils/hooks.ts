@@ -1,6 +1,6 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useEffect, useState } from "react";
 
-const useLockBodyScroll = () => {
+export const useLockBodyScroll = () => {
   const [locked, setLocked] = useState(false);
   const [originalStyle, setOriginalStyle] = useState<string | null>(null);
 
@@ -20,4 +20,21 @@ const useLockBodyScroll = () => {
   return setLocked;
 };
 
-export default useLockBodyScroll;
+export const useIsAtTop = () => {
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsAtTop(scrollPosition === 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return isAtTop;
+};

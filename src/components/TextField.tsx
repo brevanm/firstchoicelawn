@@ -9,7 +9,7 @@ const TextField = (props: Props) => {
 
   return (
     <input
-      className="border border-gray-300 rounded px-4 py-2 w-full"
+      className="border border-gray-300 rounded px-4 py-2 w-full focus:border-green-800 focus:outline-none"
       type="text"
       placeholder={placeholder}
       value={value}

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useLockBodyScroll from "../utils/hooks";
+import { useLockBodyScroll } from "../utils/hooks";
 import IconClose from "./icons/CloseIcon";
 
 type Props = {

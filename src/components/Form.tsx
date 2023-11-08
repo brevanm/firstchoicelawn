@@ -1,16 +1,34 @@
 import { useState } from "react";
 import TextField from "./TextField";
 import Button from "./Button";
-import type { Service } from "../utils/types";
+import Select from "./Select";
+import { sendEmail } from "../utils/email";
+// import type { Service } from "../utils/types";
 
-const SERVICES: Service[] = ["Mowing", "Mulching", "Other"];
+const PIPELINES = [
+  "Customer Referral",
+  "Internet",
+  "Lawn Signs",
+  "Truck/Trailer",
+  "Advertisement",
+  "Family/Friends",
+  "Mailings/Letters",
+  "Other",
+];
+
+const SERVICES = [
+  "Mowing & Grounds Maintenance",
+  "Spring & Fall Cleanups",
+  "Landscape Maintenance & Enhancements",
+];
 
 const Form = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [address, setAddress] = useState<string>("");
-  const [services, setServices] = useState<Service[]>([]);
+  const [service, setService] = useState<string>("");
+  const [pipeline, setPipeline] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,19 +52,11 @@ const Form = () => {
     setPhone(newPhoneNumber);
   };
 
-  const handleCheckboxChange = (service: Service) => {
-    if (services.includes(service)) {
-      setServices(services.filter((s) => s !== service));
-    } else {
-      setServices([...services, service]);
-    }
-  };
-
   return (
     <div className="flex flex-col bg-white rounded shadow-lg p-4">
-      <h3 className="mt-1 mb-3">Request a Quote</h3>
+      <h3 className="mt-1 mb-3 font-bold text-3xl">Get A Free Quote Today!</h3>
       <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
           <TextField placeholder="Name" value={name} setValue={setName} />
           <TextField placeholder="Email" value={email} setValue={setEmail} />
           <TextField
@@ -60,24 +70,33 @@ const Form = () => {
             setValue={setAddress}
           />
         </div>
-        <div className="flex gap-x-4 my-2 mt-4">
-          {SERVICES.map((service) => (
-            <div key={`checkbox-${service}`} className="flex gap-x-2">
-              <input
-                type="checkbox"
-                checked={services.includes(service)}
-                onChange={() => handleCheckboxChange(service)}
-              />
-              <label>{service}</label>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+          <Select
+            placeholder="Services Requested"
+            value={service}
+            setValue={(selectedOption) => setService(selectedOption)}
+            options={SERVICES}
+          />
+          <Select
+            placeholder="How did you hear about us?"
+            value={pipeline}
+            setValue={(selectedOption) => setPipeline(selectedOption)}
+            options={PIPELINES}
+          />
         </div>
         <textarea
-          className="w-full h-32 p-2 my-2 rounded border border-gray-300"
+          className="w-full h-32 p-2 rounded border border-gray-300 focus:border-green-800 focus:outline-none"
           placeholder="Describe your needs..."
         />
         <div className="flex justify-end">
-          <Button highlight>Submit</Button>
+          <Button
+            highlight
+            onClick={() => {
+              sendEmail();
+            }}
+          >
+            Submit
+          </Button>
         </div>
       </form>
     </div>

@@ -4,23 +4,28 @@ import Drawer from "./Drawer";
 import MenuIcon from "./icons/MenuIcon";
 import Logo from "../assets/logo.png";
 import "./NavBar.css";
+import Button from "./Button";
+import { useIsAtTop } from "../utils/hooks";
 
 const NavBar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const isAtTop = useIsAtTop();
 
   const list = (
     <>
       <HashLink to="/#">
-        <li>Home</li>
+        <li className="hover:text-green-700">Home</li>
       </HashLink>
       <HashLink to="/#services">
-        <li>Services</li>
+        <li className="hover:text-green-700">Services</li>
       </HashLink>
       <HashLink to="/#about">
-        <li>About</li>
+        <li className="hover:text-green-700">About</li>
       </HashLink>
       <HashLink to="/#contact">
-        <li>Contact</li>
+        <Button highlight>
+          <li className="hover:text-white">Contact</li>
+        </Button>
       </HashLink>
     </>
   );
@@ -42,20 +47,34 @@ const NavBar = () => {
           {list}
         </ul>
       </Drawer>
-      <nav className="navbar drop-shadow-lg">
-        <HashLink className="ml-10 md:ml-40" to="/#">
-          <img src={Logo} alt="logo" />
-        </HashLink>
-        <ul className="hidden list-none mr-40 p-0 justify-between  md:flex">
-          {list}
-        </ul>
-        <MenuIcon
-          className="md:hidden mr-10 cursor-pointer"
-          style={{ fontSize: "2rem" }}
-          onClick={() => {
-            setOpen(true);
-          }}
-        />
+      <nav
+        className={`transition ease-in-out duration-300 navbar drop-shadow-lg fixed w-full z-10 py-2 ${
+          isAtTop ? "" : "bg-white"
+        }`}
+      >
+        <div className=" max-w-screen-xl m-auto flex justify-between items-center">
+          <HashLink className="ml-10 md:ml-40" to="/#">
+            <img
+              style={{ filter: isAtTop ? "brightness(1000%)" : undefined }}
+              src={Logo}
+              alt="logo"
+            />
+          </HashLink>
+          <ul
+            className={`transition ease-in-out duration-300 hidden list-none mr-40 p-0 justify-between items-center gap-8 md:flex ${
+              isAtTop ? "text-white" : ""
+            }`}
+          >
+            {list}
+          </ul>
+          <MenuIcon
+            className="md:hidden mr-10 cursor-pointer"
+            style={{ fontSize: "2rem" }}
+            onClick={() => {
+              setOpen(true);
+            }}
+          />
+        </div>
       </nav>
     </>
   );
