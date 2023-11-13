@@ -14,13 +14,13 @@ const NavBar = () => {
   const list = (
     <>
       <HashLink to="/#">
-        <li className="hover:text-green-700">Home</li>
+        <li className="hover:text-fcll-green">Home</li>
       </HashLink>
       <HashLink to="/#services">
-        <li className="hover:text-green-700">Services</li>
+        <li className="hover:text-fcll-green">Services</li>
       </HashLink>
       <HashLink to="/#about">
-        <li className="hover:text-green-700">About</li>
+        <li className="hover:text-fcll-green">About</li>
       </HashLink>
       <HashLink to="/#contact">
         <Button highlight>
@@ -68,7 +68,9 @@ const NavBar = () => {
             {list}
           </ul>
           <MenuIcon
-            className="md:hidden mr-10 cursor-pointer"
+            className={`md:hidden mr-10 cursor-pointer ${
+              isAtTop ? "text-white" : ""
+            }`}
             style={{ fontSize: "2rem" }}
             onClick={() => {
               setOpen(true);

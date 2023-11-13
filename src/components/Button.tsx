@@ -10,8 +10,8 @@ const Button = (props: Props) => {
   const baseClass =
     "text-white font-semibold py-2 px-4 border border-white hover:border-transparent";
 
-  const regularClass = "bg-transparent hover:bg-white hover:text-green-800";
-  const highlightClass = "bg-green-800 border-none hover:bg-gray-800";
+  const regularClass = "bg-transparent hover:bg-white hover:text-fcll-green";
+  const highlightClass = "bg-fcll-green border-none hover:bg-gray-800";
 
   const classes = highlight
     ? baseClass + " " + highlightClass

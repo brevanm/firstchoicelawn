@@ -1,3 +1,4 @@
+import { AiTwotoneMail, AiTwotonePhone } from "react-icons/ai";
 import ShowcaseImage from "../assets/IMG_2177.jpeg.jpg";
 import Showcase from "../components/Showcase";
 import ServiceCard from "../components/ServiceCard";
@@ -15,7 +16,7 @@ const HomePage = () => {
         <img
           style={{
             objectFit: "cover",
-            objectPosition: "0% 35%",
+            objectPosition: "0% 30%",
             width: "100%",
             height: "100vh",
             margin: "0",
@@ -55,7 +56,7 @@ const HomePage = () => {
       <Showcase id="services" bgColor="#FAFDFB" padding>
         <div className="flex flex-col items-center px-2 pt-24 pb-6 max-w-screen-xl m-auto">
           <h1 className="font-bold text-6xl">Services</h1>
-          <p className="text-green-800">Design, Build & Maintain</p>
+          {/* <p className="text-fcll-green">Design, Build & Maintain</p> */}
           <div className="pt-6 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:auto-rows-fr w-full">
               <ServiceCard
@@ -123,7 +124,7 @@ const HomePage = () => {
                 We welcome you to experience the best we have to offer. Reach
                 out to one of our team members today.
               </p>
-              <p className="text-green-800 text-xl mt-4">Jayce Dippel</p>
+              <p className="text-fcll-green text-xl mt-4">Jayce Dippel</p>
               <p className="font-bold">
                 Owner, First Choice Lawn and Landscape, LLC
               </p>
@@ -137,11 +138,26 @@ const HomePage = () => {
           </div>
         </div>
       </Showcase>
-      <Showcase id="contact" bgColor="#FAFDFB" padding>
+      <Showcase id="contact" bgColor="#54784A" padding>
         <div className="max-w-screen-xl m-auto">
-          <div className="flex flex-col items-center px-2 pt-24 pb-6 ">
+          <div className="flex flex-col items-center px-2 pt-24 pb-6 text-white">
             <h1 className="font-bold text-6xl">Contact</h1>
-            <p>330-907-7556</p>
+            <div className="flex items-center justify-center gap-x-8 gap-y-4 flex-wrap mt-4">
+              <a
+                href="tel:330-671-4539"
+                className="flex items-center gap-2 hover:underline"
+              >
+                <AiTwotonePhone className="text-2xl text-white" />
+                <p>330-671-4539</p>
+              </a>
+              <a
+                href="mailto:office@firstchoicelawnlandscape.com"
+                className="flex items-center gap-2 hover:underline"
+              >
+                <AiTwotoneMail className="text-2xl text-white" />
+                <p>office@firstchoicelawnlandscape.com</p>
+              </a>
+            </div>
           </div>
           <Form />
         </div>

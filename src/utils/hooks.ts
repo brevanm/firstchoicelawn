@@ -26,7 +26,7 @@ export const useIsAtTop = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsAtTop(scrollPosition === 0);
+      setIsAtTop(scrollPosition <= 0);
     };
 
     window.addEventListener("scroll", handleScroll);
