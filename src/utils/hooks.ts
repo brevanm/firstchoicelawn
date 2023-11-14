@@ -1,4 +1,7 @@
-import { useLayoutEffect, useEffect, useState } from "react";
+import { useLayoutEffect, useEffect, useState, useContext } from "react";
+import { SnackBarContext } from "../components/SnackBarProvider";
+
+export const useSnackBarContext = () => useContext(SnackBarContext);
 
 export const useLockBodyScroll = () => {
   const [locked, setLocked] = useState(false);

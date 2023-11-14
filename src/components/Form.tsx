@@ -1,7 +1,11 @@
 import { useState } from "react";
+import api from "../utils/api";
 import TextField from "./TextField";
 import Button from "./Button";
 import Select from "./Select";
+import { useSnackBarContext } from "../utils/hooks";
+import type { PostEmailPayload } from "../utils/types";
+import { ScaleLoader } from "react-spinners";
 
 const PIPELINES = [
   "Customer Referral",
@@ -27,10 +31,56 @@ const Form = () => {
   const [address, setAddress] = useState<string>("");
   const [service, setService] = useState<string>("");
   const [pipeline, setPipeline] = useState<string>("");
+  const [comments, setComments] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const showSnackbar = useSnackBarContext();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(name, email, phone);
+
+    const payload: PostEmailPayload = {
+      name,
+      email,
+      phone,
+      address,
+      service,
+      pipeline,
+      comments,
+    };
+
+    setIsLoading(true);
+
+    api
+      .postContact(payload)
+      .then((res) => {
+        if (res.status !== 200) {
+          throw new Error("Something went wrong");
+        }
+
+        showSnackbar({
+          title: "Success",
+          message: "Your message has been received!",
+          level: "success",
+        });
+        setName("");
+        setEmail("");
+        setPhone("");
+        setAddress("");
+        setService("");
+        setPipeline("");
+        setComments("");
+      })
+      .catch(() => {
+        showSnackbar({
+          title: "Error",
+          message: "Something went wrong. Please try again later.",
+          level: "error",
+        });
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const handlePhoneChange = (number: string) => {
@@ -85,9 +135,19 @@ const Form = () => {
         <textarea
           className="w-full h-32 p-2 rounded border border-gray-300 focus:border-green-800 focus:outline-none"
           placeholder="Describe your needs..."
+          value={comments}
+          onChange={(e) => setComments(e.target.value)}
         />
         <div className="flex justify-end">
-          <Button highlight>Submit</Button>
+          <Button highlight disabled={isLoading}>
+            {isLoading ? (
+              <div className="h-6 w-16 flex items-center justify-center">
+                <ScaleLoader height="1.5rem" width=".25rem" />
+              </div>
+            ) : (
+              <p className="h-6 w-16">Submit</p>
+            )}
+          </Button>
         </div>
       </form>
     </div>

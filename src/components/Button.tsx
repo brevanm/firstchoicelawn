@@ -2,10 +2,11 @@ type Props = {
   children: React.ReactNode;
   onClick?: () => void;
   highlight?: boolean;
+  disabled?: boolean;
 };
 
 const Button = (props: Props) => {
-  const { children, highlight, onClick } = props;
+  const { children, highlight, onClick, disabled } = props;
 
   const baseClass =
     "text-white font-semibold py-2 px-4 border border-white hover:border-transparent";
@@ -17,8 +18,14 @@ const Button = (props: Props) => {
     ? baseClass + " " + highlightClass
     : baseClass + " " + regularClass;
 
+  const handleClick = () => {
+    if (!disabled && onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <button onClick={onClick} className={classes}>
+    <button onClick={handleClick} className={classes}>
       {children}
     </button>
   );
