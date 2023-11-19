@@ -10,11 +10,7 @@ type Props = {
 
 const SnackBarProvider = (props: Props) => {
   const { children } = props;
-  const [alert, setAlert] = useState<Alert | undefined>({
-    title: "Test",
-    message: "Test",
-    level: "success",
-  });
+  const [alert, setAlert] = useState<Alert | undefined>(undefined);
 
   const showSnackBar = (alert: Alert) => {
     setAlert(alert);
