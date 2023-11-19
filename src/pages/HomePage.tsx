@@ -144,11 +144,11 @@ const HomePage = () => {
             <h1 className="font-bold text-6xl">Contact</h1>
             <div className="flex items-center justify-center gap-x-8 gap-y-4 flex-wrap mt-4">
               <a
-                href="tel:330-671-4539"
+                href="tel:330-934-2112"
                 className="flex items-center gap-2 hover:underline"
               >
                 <AiTwotonePhone className="text-2xl text-white" />
-                <p>330-671-4539</p>
+                <p>330-934-2112</p>
               </a>
               <a
                 href="mailto:office@firstchoicelawnlandscape.com"
