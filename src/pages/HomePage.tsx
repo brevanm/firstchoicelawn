@@ -28,18 +28,20 @@ const HomePage = () => {
         />
         <div
           className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-10 md:px-40 max-w-screen-xl"
-          style={{ top: "55%" }}
+          style={{ top: "51%" }}
         >
-          <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-center text-white">
+          <h1 className="text-3xl md:text-4xl xl:text-6xl font-bold text-center text-white">
             First Choice Lawn & Landscape
           </h1>
-          <p className="my-6 text-center" style={{ color: "white" }}>
+          <p className="my-6 text-center text-white text-xl md:text-xl xl:text-2xl">
             Akron's premier commercial and residential grounds maintenance
-            company. Since 2020, First Choice Lawn & Landscape has proudly
-            served the Barberton, Norton, Wadsworth, & surrounding areas. We
-            offer a range of residential and commercial grounds maintenance
-            solutions and are your trusted partner for all your lawn & landscape
-            needs.
+            company
+          </p>
+          <p className="my-6 text-center text-white">
+            Since 2020, First Choice Lawn & Landscape has proudly served the
+            Barberton, Norton, Wadsworth, & surrounding areas. We offer a range
+            of residential and commercial grounds maintenance solutions and are
+            your trusted partner for all your lawn & landscape needs.
           </p>
           <div
             style={{ display: "flex", justifyContent: "center", gap: "20px" }}
