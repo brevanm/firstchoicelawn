@@ -11,16 +11,18 @@ const NavBar = () => {
   const [open, setOpen] = useState<boolean>(false);
   const isAtTop = useIsAtTop();
 
+  const hoverClass = isAtTop ? "hover:text-white" : "hover:text-fcll-green";
+
   const list = (
     <>
       <HashLink to="/#">
-        <li className="hover:text-fcll-green">Home</li>
+        <li className={hoverClass}>Home</li>
       </HashLink>
       <HashLink to="/#services">
-        <li className="hover:text-fcll-green">Services</li>
+        <li className={hoverClass}>Services</li>
       </HashLink>
       <HashLink to="/#about">
-        <li className="hover:text-fcll-green">About</li>
+        <li className={hoverClass}>About</li>
       </HashLink>
       <HashLink to="/#contact">
         <Button highlight>
