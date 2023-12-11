@@ -6,7 +6,7 @@ import Form from "../components/Form";
 import TreeImage from "../assets/services/trees.jpg";
 import LeavesImage from "../assets/services/leaves.jpeg";
 import MowingImage from "../assets/services/mowing.jpeg";
-import AboutImage from "../assets/about.png";
+import AboutImage from "../assets/about.jpeg";
 import Button from "../components/Button";
 
 const HomePage = () => {
@@ -58,7 +58,7 @@ const HomePage = () => {
       <Showcase id="services" bgColor="#FAFDFB" padding>
         <div className="flex flex-col items-center px-2 pt-24 pb-6 max-w-screen-xl m-auto">
           <h1 className="font-bold text-6xl">Services</h1>
-          {/* <p className="text-fcll-green">Design, Build & Maintain</p> */}
+          <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4" />
           <div className="pt-6 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:auto-rows-fr w-full">
               <ServiceCard
@@ -101,15 +101,13 @@ const HomePage = () => {
       </Showcase>
       <Showcase id="about" padding>
         <div className="flex flex-col items-center px-2 pt-24 pb-6">
-          <div className="flex flex-wrap gap-8 items-center justify-center">
+          <h1 className="font-bold text-6xl">About</h1>
+          <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4" />
+          <div className="flex flex-wrap gap-8 items-center justify-center mt-8 md:mt-12">
             <div
               style={{ maxWidth: "30rem" }}
               className="text-center md:text-left"
             >
-              {/* <h3 className="text-green-800 text-xl my-4">
-                About First Choice Lawn & Landscape
-              </h3> */}
-              <p className="my-4 font-bold">A word from our owner...</p>
               <p className="my-4 text-gray-700">
                 I started this business as a kid with nothing more than a push
                 mower in the bed of a truck. I never thought we'd grow into the
@@ -126,8 +124,8 @@ const HomePage = () => {
                 We welcome you to experience the best we have to offer. Reach
                 out to one of our team members today.
               </p>
-              <p className="text-fcll-green text-xl mt-4">Jayce Dippel</p>
-              <p className="font-bold">
+              <p className="text-fcll-green text-md mt-4">Jayce Dippel</p>
+              <p className="font-bold text-sm">
                 Owner, First Choice Lawn and Landscape, LLC
               </p>
             </div>
