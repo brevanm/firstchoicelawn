@@ -1,3 +1,5 @@
+"use client";
+
 import { Footer as FlowbiteFooter } from "flowbite-react";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 
