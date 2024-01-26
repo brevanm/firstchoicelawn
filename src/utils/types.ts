@@ -25,6 +25,15 @@ export type PostEmailPayload = {
   comments: string;
 };
 
+export type PostCareerEmailPayload = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  career: string;
+  comments: string;
+}
+
 export type level = "success" | "error";
 
 export type Alert = {

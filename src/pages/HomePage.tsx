@@ -2,7 +2,7 @@ import { AiTwotoneMail, AiTwotonePhone } from "react-icons/ai";
 import ShowcaseImage from "../assets/IMG_2177.jpeg.jpg";
 import Showcase from "../components/Showcase";
 import ServiceCard from "../components/ServiceCard";
-import Form from "../components/Form";
+import ServicesContactForm from "../components/ServicesContactForm";
 import TreeImage from "../assets/services/trees.jpg";
 import LeavesImage from "../assets/services/leaves.jpeg";
 import MowingImage from "../assets/services/mowing.jpeg";
@@ -58,7 +58,7 @@ const HomePage = () => {
       <Showcase id="services" bgColor="#FAFDFB" padding>
         <div className="flex flex-col items-center px-2 pt-24 pb-6 max-w-screen-xl m-auto">
           <h1 className="font-bold text-6xl">Services</h1>
-          <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4" />
+          <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4 border-none" />
           <div className="pt-6 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:auto-rows-fr w-full">
               <ServiceCard
@@ -102,7 +102,7 @@ const HomePage = () => {
       <Showcase id="about" padding>
         <div className="flex flex-col items-center px-2 pt-24 pb-6">
           <h1 className="font-bold text-6xl">About</h1>
-          <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4" />
+          <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4 border-none" />
           <div className="flex flex-wrap gap-8 items-center justify-center mt-8 md:mt-12">
             <div
               style={{ maxWidth: "30rem" }}
@@ -139,7 +139,7 @@ const HomePage = () => {
         </div>
       </Showcase>
       <Showcase id="contact" bgColor="#54784A" padding>
-        <div className="max-w-screen-xl m-auto">
+        <div className="max-w-screen-xl m-auto pb-12">
           <div className="flex flex-col items-center px-2 pt-24 pb-6 text-white">
             <h1 className="font-bold text-6xl">Contact</h1>
             <div className="flex items-center justify-center gap-x-8 gap-y-4 flex-wrap mt-4">
@@ -159,7 +159,7 @@ const HomePage = () => {
               </a>
             </div>
           </div>
-          <Form />
+          <ServicesContactForm />
         </div>
       </Showcase>
     </>

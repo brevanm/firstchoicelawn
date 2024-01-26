@@ -24,7 +24,7 @@ const SERVICES = [
   "Landscape Maintenance & Enhancements",
 ];
 
-const Form = () => {
+const ServicesContactForm = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
@@ -154,4 +154,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ServicesContactForm;
