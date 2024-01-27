@@ -8,6 +8,7 @@ import LeavesImage from "../assets/services/leaves.jpeg";
 import MowingImage from "../assets/services/mowing.jpeg";
 import AboutImage from "../assets/about.jpeg";
 import Button from "../components/Button";
+import JobberForm from "../components/JobberForm";
 
 const HomePage = () => {
   return (
@@ -159,7 +160,8 @@ const HomePage = () => {
               </a>
             </div>
           </div>
-          <ServicesContactForm />
+          {/* <ServicesContactForm /> */}
+          <JobberForm />
         </div>
       </Showcase>
     </>
