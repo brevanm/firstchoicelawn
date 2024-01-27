@@ -2,7 +2,7 @@ import { AiTwotoneMail, AiTwotonePhone } from "react-icons/ai";
 import ShowcaseImage from "../assets/IMG_2177.jpeg.jpg";
 import Showcase from "../components/Showcase";
 import ServiceCard from "../components/ServiceCard";
-import ServicesContactForm from "../components/ServicesContactForm";
+// import ServicesContactForm from "../components/ServicesContactForm";
 import TreeImage from "../assets/services/trees.jpg";
 import LeavesImage from "../assets/services/leaves.jpeg";
 import MowingImage from "../assets/services/mowing.jpeg";
