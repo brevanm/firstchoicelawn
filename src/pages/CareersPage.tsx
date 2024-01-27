@@ -23,9 +23,9 @@ const CareersPage = () => {
         />
         <div
           className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-10 md:px-40 max-w-screen-xl"
-          style={{ top: "51%" }}
+          style={{ top: "55%" }}
         >
-          <h1 className="text-3xl md:text-4xl xl:text-6xl font-bold text-center text-white">
+          <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-center text-white">
             Careers at First Choice Lawn & Landscape
           </h1>
           <p className="my-6 text-center text-white">
@@ -36,7 +36,7 @@ const CareersPage = () => {
       </Showcase>
       <Showcase  padding>
         <div className="flex flex-col items-start px-2 pt-24 pb-12 max-w-screen-xl m-auto">
-            <h1 className="font-bold text-4xl">Why work with First Choice Lawn & Landscape?</h1>
+            <h1 className="font-bold text-2xl md:text-4xl">Why work with First Choice Lawn & Landscape?</h1>
             <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4 border-none" />
             <p className="pt-6 w-full">
             First Choice Lawn & Landscape is a company in Summit County, OH, that is dedicated to providing its employees with a great work environment. 
@@ -47,7 +47,7 @@ const CareersPage = () => {
         </Showcase>
       <Showcase bgColor="#FAFDFB" padding>
         <div className="flex flex-col items-start px-2 pb-24 pt-12 max-w-screen-xl m-auto">
-            <h1 className="font-bold text-4xl">We {'>'} Me</h1>
+            <h1 className="font-bold text-2xl md:text-4xl">We {'>'} Me</h1>
             <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4 border-none" />
             <p className="pt-6 w-full">
             Since the inception of First Choice, company owner Jayce Dippel has strived to implement a culture called "We over Me." "We over Me", 
