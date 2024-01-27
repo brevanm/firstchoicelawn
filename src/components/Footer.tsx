@@ -17,7 +17,14 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm:mt-4 sm:grid-cols-1 sm:gap-6">
+          <div className="flex gap-8 sm:mt-4" >
+          <div>
+            <FlowbiteFooter.Title title="Company" />
+            <FlowbiteFooter.LinkGroup col>
+              <FlowbiteFooter.Link href="/careers">Careers</FlowbiteFooter.Link>
+            </FlowbiteFooter.LinkGroup>
+          </div>
+          <div className="grid grid-cols-1 gap-8  sm:grid-cols-1 sm:gap-6">
             <div>
               <FlowbiteFooter.Title title="Follow us" />
               <FlowbiteFooter.LinkGroup className="gap-2">
@@ -32,6 +39,7 @@ const Footer = () => {
               </FlowbiteFooter.LinkGroup>
             </div>
           </div>
+          </div>
         </div>
         <FlowbiteFooter.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between">
@@ -41,11 +49,7 @@ const Footer = () => {
             year={2024}
           />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            {/* <FlowbiteFooter.Icon href="#" icon={BsFacebook} />
-            <FlowbiteFooter.Icon href="#" icon={BsInstagram} />
-            <FlowbiteFooter.Icon href="#" icon={BsTwitter} />
-            <FlowbiteFooter.Icon href="#" icon={BsGithub} />
-            <FlowbiteFooter.Icon href="#" icon={BsDribbble} /> */}
+          
           </div>
         </div>
       </div>
