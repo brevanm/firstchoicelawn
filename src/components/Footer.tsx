@@ -44,7 +44,7 @@ const Footer = () => {
           <FlowbiteFooter.Copyright
             href="#"
             by="First Choice Lawn & Landscape"
-            year={2024}
+            year={new Date().getFullYear()}
           />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
 
