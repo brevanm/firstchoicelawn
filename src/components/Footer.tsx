@@ -1,5 +1,3 @@
-"use client";
-
 import { Footer as FlowbiteFooter } from "flowbite-react";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 
@@ -18,27 +16,27 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex gap-8 sm:mt-4" >
-          <div>
-            <FlowbiteFooter.Title title="Company" />
-            <FlowbiteFooter.LinkGroup col>
-              <FlowbiteFooter.Link href="/careers">Careers</FlowbiteFooter.Link>
-            </FlowbiteFooter.LinkGroup>
-          </div>
-          <div className="grid grid-cols-1 gap-8  sm:grid-cols-1 sm:gap-6">
             <div>
-              <FlowbiteFooter.Title title="Follow us" />
-              <FlowbiteFooter.LinkGroup className="gap-2">
-                <FlowbiteFooter.Icon
-                  href="https://www.facebook.com/FirstChoiceLawnAndLandscape3306714539/"
-                  icon={BsFacebook}
-                />
-                <FlowbiteFooter.Icon
-                  href="https://www.instagram.com/firstchoicelawnandlandscapellc"
-                  icon={BsInstagram}
-                />
+              <FlowbiteFooter.Title title="Company" />
+              <FlowbiteFooter.LinkGroup col>
+                <FlowbiteFooter.Link href="/careers">Careers</FlowbiteFooter.Link>
               </FlowbiteFooter.LinkGroup>
             </div>
-          </div>
+            <div className="grid grid-cols-1 gap-8  sm:grid-cols-1 sm:gap-6">
+              <div>
+                <FlowbiteFooter.Title title="Follow us" />
+                <FlowbiteFooter.LinkGroup className="gap-2">
+                  <FlowbiteFooter.Icon
+                    href="https://www.facebook.com/FirstChoiceLawnAndLandscape3306714539/"
+                    icon={BsFacebook}
+                  />
+                  <FlowbiteFooter.Icon
+                    href="https://www.instagram.com/firstchoicelawnandlandscapellc"
+                    icon={BsInstagram}
+                  />
+                </FlowbiteFooter.LinkGroup>
+              </div>
+            </div>
           </div>
         </div>
         <FlowbiteFooter.Divider />
@@ -49,7 +47,7 @@ const Footer = () => {
             year={2024}
           />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-          
+
           </div>
         </div>
       </div>
