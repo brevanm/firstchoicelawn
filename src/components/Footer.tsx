@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="w-full px-6 md:px-40">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1 gap-8">
           <div>
-            <a href="#">
+            <a href="/">
               <img
                 className="w-32"
                 src="https://firstchoicelawnlandscape.com/full-logo.png"
@@ -16,12 +16,11 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex gap-8 sm:mt-4" >
-            <div>
+            {/*  <div>
               <FlowbiteFooter.Title title="Company" />
               <FlowbiteFooter.LinkGroup col>
-                <FlowbiteFooter.Link href="/careers">Careers</FlowbiteFooter.Link>
               </FlowbiteFooter.LinkGroup>
-            </div>
+            </div> */}
             <div className="grid grid-cols-1 gap-8  sm:grid-cols-1 sm:gap-6">
               <div>
                 <FlowbiteFooter.Title title="Follow us" />
@@ -42,7 +41,6 @@ const Footer = () => {
         <FlowbiteFooter.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <FlowbiteFooter.Copyright
-            href="#"
             by="First Choice Lawn & Landscape"
             year={new Date().getFullYear()}
           />
