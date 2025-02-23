@@ -50,11 +50,11 @@ const NavBar = () => {
         </ul>
       </Drawer>
       <nav
-        className={`transition ease-in-out duration-300 navbar drop-shadow-lg fixed w-full z-10 py-2 px-40 ${isAtTop ? "" : "bg-white"
+        className={`transition ease-in-out duration-300 navbar drop-shadow-lg fixed w-full z-10 py-2 ${isAtTop ? "" : "bg-white"
           }`}
       >
         <div className="max-w-screen-xl m-auto flex justify-between items-center">
-          <HashLink className="" to="/#">
+          <HashLink className="ml-10 md:ml-40" to="/#">
             <img
               style={{ filter: isAtTop ? "saturate(0) invert(1) brightness(100%)" : undefined }}
               src={Logo}
@@ -62,7 +62,7 @@ const NavBar = () => {
             />
           </HashLink>
           <ul
-            className={`transition ease-in-out duration-300 hidden list-none p-0 justify-between items-center gap-8 md:flex ${isAtTop ? "text-white" : ""
+            className={`transition ease-in-out duration-300 hidden list-none mr-40 p-0 justify-between items-center gap-8 md:flex ${isAtTop ? "text-white" : ""
               }`}
           >
             {list}
