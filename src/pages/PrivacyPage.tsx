@@ -23,7 +23,7 @@ const PrivacyPage = () => {
           className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-10 md:px-40 max-w-screen-xl"
           style={{ top: "55%" }}
         >
-          <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-center text-white">
+          <h1 className="text-6xl font-bold text-center text-white">
             Privacy Policy
           </h1>
 
