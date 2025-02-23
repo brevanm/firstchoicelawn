@@ -45,7 +45,9 @@ const Footer = () => {
             year={new Date().getFullYear()}
           />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-
+            <FlowbiteFooter.LinkGroup>
+              <FlowbiteFooter.Link href="/privacy">Privacy Policy</FlowbiteFooter.Link>
+            </FlowbiteFooter.LinkGroup>
           </div>
         </div>
       </div>
