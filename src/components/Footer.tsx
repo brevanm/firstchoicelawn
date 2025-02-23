@@ -10,7 +10,7 @@ const Footer = () => {
             <a href="/">
               <img
                 className="w-32"
-                src="https://firstchoicelawnlandscape.com/full-logo.png"
+                src="logo-winter.png"
                 alt="logo"
               />
             </a>
