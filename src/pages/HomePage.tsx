@@ -9,7 +9,7 @@ import MowingImage from "../assets/services/mowing.jpeg";
 import AboutImage from "../assets/about.jpeg";
 import Button from "../components/Button";
 import JobberForm from "../components/JobberForm";
-import Carousel from "../components/Carousel";
+// import Carousel from "../components/carousel/ImageCarousel";
 
 const HomePage = () => {
   return (
