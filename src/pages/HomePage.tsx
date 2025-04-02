@@ -140,7 +140,7 @@ const HomePage = () => {
           </div>
         </div>
       </Showcase>
-      <Showcase id="gallery" bgColor="#FAFDFB" padding>
+      {/** <Showcase id="gallery" bgColor="#FAFDFB" padding>
         <div className="pb-20 pt-24">
           <div className="flex flex-col items-center pb-8">
             <h1 className="font-bold text-6xl w-fit ">Gallery</h1>
@@ -148,7 +148,7 @@ const HomePage = () => {
           </div>
           <Carousel />
         </div>
-      </Showcase>
+      </Showcase> */}
       <Showcase id="gallery" bgColor="#54784A" padding>
         <div className="max-w-screen-xl m-auto pb-12">
           <div className="flex flex-col items-center px-2 pt-24 pb-6 text-white">
