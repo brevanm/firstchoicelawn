@@ -1,36 +1,15 @@
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import TreeImage from "../assets/services/trees.jpg";
-import LeavesImage from "../assets/services/leaves.jpeg";
-import MowingImage from "../assets/services/mowing.jpeg";
-import AboutImage from "../assets/about.jpeg";
-import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import TreeImage from "../../assets/services/trees.jpg";
+import LeavesImage from "../../assets/services/leaves.jpeg";
+import MowingImage from "../../assets/services/mowing.jpeg";
+import AboutImage from "../../assets/about.jpeg";
+import { NextArrow } from './NextArrow';
+import { PrevArrow } from './PrevArrow';
 
 const images = [TreeImage, LeavesImage, MowingImage, AboutImage];
 
-const Carousel = () => {
-  function SampleNextArrow(props: any) {
-    const { className, style, onClick } = props;
-    return (
-      <AiFillCaretRight
-        className={className}
-        style={{ ...style, display: 'block', fill: '#54784A' }}
-        onClick={onClick}
-      />
-    );
-  }
+const ImageCarousel = () => {
 
-  function SamplePrevArrow(props: any) {
-    const { className, style, onClick } = props;
-    return (
-      <AiFillCaretLeft
-        className={className}
-        style={{ ...style, display: 'block', fill: '#54784A' }}
-        onClick={onClick}
-      />
-    );
-  }
   var settings = {
     dots: true,
     infinite: true,
@@ -39,8 +18,8 @@ const Carousel = () => {
     autoplaySpeed: 3000,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1280,
@@ -82,4 +61,4 @@ const Carousel = () => {
   );
 }
 
-export default Carousel;
+export default ImageCarousel;
