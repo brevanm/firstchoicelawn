@@ -9,6 +9,7 @@ import MowingImage from "../assets/services/mowing.jpeg";
 import AboutImage from "../assets/about.jpeg";
 import Button from "../components/Button";
 import JobberForm from "../components/JobberForm";
+import Carousel from "../components/Carousel";
 
 const HomePage = () => {
   return (
@@ -139,7 +140,16 @@ const HomePage = () => {
           </div>
         </div>
       </Showcase>
-      <Showcase id="contact" bgColor="#54784A" padding>
+      <Showcase id="gallery" bgColor="#FAFDFB" padding>
+        <div className="pb-20 pt-24">
+          <div className="flex flex-col items-center pb-8">
+            <h1 className="font-bold text-6xl w-fit ">Gallery</h1>
+            <hr className="w-24 h-1 bg-fcll-green rounded-full mt-4 border-none" />
+          </div>
+          <Carousel />
+        </div>
+      </Showcase>
+      <Showcase id="gallery" bgColor="#54784A" padding>
         <div className="max-w-screen-xl m-auto pb-12">
           <div className="flex flex-col items-center px-2 pt-24 pb-6 text-white">
             <h1 className="font-bold text-6xl">Contact</h1>

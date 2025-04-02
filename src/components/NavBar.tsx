@@ -24,6 +24,9 @@ const NavBar = () => {
       <HashLink to="/#about">
         <li className={hoverClass}>About</li>
       </HashLink>
+      <HashLink to="/#gallery">
+        <li className={hoverClass}>Gallery</li>
+      </HashLink>
       <HashLink to="/#contact">
         <Button highlight>
           <li className="hover:text-white">Contact</li>
